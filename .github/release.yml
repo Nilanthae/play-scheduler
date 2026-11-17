@@ -1,0 +1,17 @@
+# Groups auto-generated release notes by issue/PR label.
+changelog:
+  exclude:
+    labels: [skip-release-notes]
+  categories:
+    - title: "✨ Features"
+      labels: [type:feature]
+    - title: "🐛 Fixes"
+      labels: [type:bug]
+    - title: "🧪 Tests"
+      labels: [type:test]
+    - title: "📚 Docs"
+      labels: [type:docs]
+    - title: "🔧 Maintenance & CI"
+      labels: [type:chore, type:ci]
+    - title: "Other changes"
+      labels: ["*"]

@@ -1,0 +1,35 @@
+name: Task
+description: A unit of work on the board (feature, chore, docs, test, CI)
+title: "T-XXX · "
+labels: []
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What & why (plain English)
+      description: Explain so a non-developer understands the value.
+    validations:
+      required: true
+  - type: input
+    id: requirement
+    attributes:
+      label: Requirement
+      placeholder: e.g. FR-3.2 (see docs/01-requirements.md)
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Steps / technical notes.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      value: |
+        - [ ]
+    validations:
+      required: true
+  - type: input
+    id: depends
+    attributes:
+      label: Depends on
+      placeholder: "#12, #13"

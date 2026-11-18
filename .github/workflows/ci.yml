@@ -15,19 +15,20 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
-      - run: npm ci
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
       - name: Lint
-        run: npm run lint
+        run: pnpm run lint
       - name: Type check
-        run: npm run typecheck
+        run: pnpm run typecheck
       - name: Unit tests
-        run: npm test -- --run
+        run: pnpm test -- --run
       - name: Build
-        run: npm run build
+        run: pnpm run build
         env:
           # Build must not need a real DB; set a secret later if a page queries at build time.
           DATABASE_URL: ${{ secrets.DATABASE_URL_CI || 'postgres://user:pass@localhost:5432/ci' }}

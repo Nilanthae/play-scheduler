@@ -11,9 +11,9 @@ Badminton group app: play schedule, RSVP/attendance, expenses and cost sharing. 
 Next.js App Router + TypeScript, Tailwind + shadcn/ui, Drizzle ORM + Neon Postgres, Zod, Vitest, Playwright, Vercel, GitHub Actions.
 
 ## Commands
-- `npm run dev` / `npm run build`
-- `npm run lint` / `npm run typecheck` / `npm test` / `npm run test:e2e`
-- `npm run db:generate` (after schema change) → `npm run db:migrate`
+- `pnpm run dev` / `pnpm run build`
+- `pnpm run lint` / `pnpm run typecheck` / `pnpm test` / `pnpm run test:e2e`
+- `pnpm run db:generate` (after schema change) → `pnpm run db:migrate`
 
 ## Rules
 - Money is integer cents (LKR). Never use floats for money.

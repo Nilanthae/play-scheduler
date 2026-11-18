@@ -11,6 +11,7 @@ concurrency:
 
 jobs:
   check:
+    name: CI / check
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:

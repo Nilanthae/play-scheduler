@@ -2,12 +2,15 @@
 
 Written for: the developer or organiser who sets up Vercel and runs database changes.
 
+## Current status
+Development runs on the **dev site only**: `https://play-scheduler-dev.vercel.app`. The production site (`play-scheduler-prod.vercel.app`) is not in use yet and is set up later, before release.
+
 ## How it works
-- **Production:** every merge to `main` is deployed to the live site by Vercel.
+- **Dev site:** every merge to `main` is deployed to the dev site by Vercel.
 - **Preview:** every pull request gets its own preview URL. Vercel posts it as a comment on the PR, so changes can be checked on a phone before merging.
 - **Database:** each environment has its own Neon branch.
-  - Production → Neon `main` branch
-  - Preview → Neon `dev` branch
+  - Dev site and previews → Neon `dev` branch
+  - Production (later) → Neon `main` branch
 
 ## One-time setup (done by the project owner)
 1. In Vercel, import the GitHub repo `Nilanthae/play-scheduler` (Hobby plan). Framework: Next.js. Build command: default (`pnpm run build`).

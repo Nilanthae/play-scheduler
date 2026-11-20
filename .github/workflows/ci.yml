@@ -27,7 +27,7 @@ jobs:
       - name: Type check
         run: pnpm run typecheck
       - name: Unit tests
-        run: pnpm test -- --run
+        run: pnpm test
       - name: Build
         run: pnpm run build
         env:

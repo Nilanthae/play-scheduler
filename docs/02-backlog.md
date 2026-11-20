@@ -131,12 +131,13 @@ Makes the app live on the internet automatically. Every merged change goes to th
 
 **Scope**
 - Import the GitHub repo in Vercel (Hobby plan).
-- Set env vars: production → Neon `main`, preview → Neon `dev`.
-- Run `db:migrate` as part of the production build, or as a manual step documented in `docs/`.
+- Set env vars: dev site and previews → Neon `dev`. Production → Neon `main` is deferred until launch.
+- Migrations are a manual step documented in `docs/deployment.md`.
 
-**Acceptance criteria**
-- [ ] Merging to `main` updates the production URL.
+**Acceptance criteria** (revised: development continues on the dev site only)
+- [ ] Merging to `main` updates the dev site (`play-scheduler-dev.vercel.app`), and its `/api/health` returns `{"ok":true,"db":"up"}`.
 - [ ] Each PR gets a Vercel preview URL comment.
+- [ ] Production deployment is set up before v1.0 release (T-030), not required for T-007.
 
 ### T-008 · Testing setup (unit + end-to-end)
 - **Labels:** type:test, area:quality, size:S, model:sonnet, priority:P1

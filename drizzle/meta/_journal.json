@@ -8,6 +8,13 @@
       "when": 1794991639873,
       "tag": "0000_special_sprite",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1795165059644,
+      "tag": "0001_slim_wasp",
+      "breakpoints": true
     }
   ]
 }

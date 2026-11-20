@@ -4,7 +4,5 @@ import { pgTable, serial, timestamp } from "drizzle-orm/pg-core";
 // timestamptz stores UTC; display converts to Asia/Colombo.
 export const health = pgTable("health", {
   id: serial("id").primaryKey(),
-  checkedAt: timestamp("checked_at", { withTimezone: true })
-    .notNull()
-    .defaultNow(),
+  checkedAt: timestamp("checked_at", { withTimezone: true }).notNull().defaultNow(),
 });
